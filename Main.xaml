@@ -1,0 +1,257 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" mva:VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="847.333333333333,5188" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:mva="clr-namespace:Microsoft.VisualBasic.Activities;assembly=System.Activities" xmlns:p="http://schemas.uipath.com/workflow/activities/word" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=mscorlib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data" xmlns:uasb="clr-namespace:UiPath.Activities.System.Binding;assembly=UiPath.System.Activities" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="48">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Activities.System.Binding</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Excel</x:String>
+      <x:String>UiPath.Word</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>UiPath.Mail</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Word.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="38">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <ueab:SequenceX sap:VirtualizedContainerService.HintSize="761.333333333333,5023.33333333333" sap2010:WorkflowViewState.IdRef="SequenceX_1">
+    <ueab:SequenceX.Variables>
+      <Variable x:TypeArguments="ue:IWorkbookQuickHandle" Default="[new WorkbookQuickHandle(workbookPath:=&quot;Project_Notebook.xlsx&quot;,visible:=True,autoSave:=False,createNew:=True,readOnly:=False,isWorkspace:=True)]" Name="Notes" />
+      <Variable x:TypeArguments="uasb:BindingsRepository" Default="[new UiPath.Activities.System.Binding.BindingsRepository()]" Name="Saved" />
+      <Variable x:TypeArguments="sd:DataTable" Name="row" />
+    </ueab:SequenceX.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <uix:NApplicationCard CloseMode="{x:Null}" OpenMode="{x:Null}" sap2010:Annotation.AnnotationText="the robot opens a browser window that opens the Google Searh result page for &quot;euro exchange rate&quot;" DisplayName="Use Browser Edge: 欧元兑美元汇率_百度搜索" sap:VirtualizedContainerService.HintSize="719.333333333333,611.333333333333" sap2010:WorkflowViewState.IdRef="NApplicationCard_1">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="387.333333333333,348" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGetText sap2010:Annotation.AnnotationText="The robots gets the exchange rate and saves it for later use in &quot;Exchange Rate&quot; value.&#xA;&#xA;This way, the robot can use the value outside the resource." DisplayName="Get Text 'SPAN'" sap:VirtualizedContainerService.HintSize="345.333333333333,256" sap2010:WorkflowViewState.IdRef="NGetText_1">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable DesignTimeRectangle="221, 732, 138, 51" ElementType="Text" FriendlyName="'SPAN'" FullSelectorArgument="&lt;html app='msedge.exe' title='欧元兑美元汇率_百度搜索' /&gt;&lt;webctrl aaname='1.1748' parentid='2' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;html app='msedge.exe' title='欧元兑美元汇率_百度搜索' /&gt;&lt;webctrl aaname='1.1748' parentid='2' tag='SPAN' type='' /&gt;" InformativeScreenshot="c4f6c4c6b95b54ecd886b91167fc92c8.png" SearchSteps="Selector, FuzzySelector" />
+              </uix:NGetText.Target>
+              <uix:NGetText.Text>
+                <OutArgument x:TypeArguments="ue:ExcelValue">[Saved.Values(Of ExcelValue)("Exchange Rate")]</OutArgument>
+              </uix:NGetText.Text>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </uix:NGetText>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp BrowserType="Edge" IconBase64="iVBORw0KGgoAAAANSUhEUgAAAEAAAABACAYAAACqaXHeAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAARKSURBVHhe7ZkxjhUxDIa5EwfgAlyAA3ABLkBLgUSHREO3JQ2iRKKghIoOOgoKOkRFN+jTToTltR07kxnN8vaXfu3bfZnJ5IvtJLP3lgvXHYD158XqDsD682K1G4AP35bl0etluf/s2nzmb2fTLgCevvs3cG2+ywpgtH/yZlneflmW33/WLyZqOoCrT/bApRlMJAb6+OrmdQ9fLsvXn2ujSZoKgAd/8OLmg2vTxptN/i5TR5trZ0KYCiAz+820tRQNvjkCWNVUAFbYeqat1quPdlvLlVoSaSoA60EjS2XTp5m2M3QaAJX0af78fb14g04DoJI+zV4dqeg0AFjirDaR/ysA1vc9ny4FMktYM22lKgWweYbSAH78ut7BsVR55LfsA6o14LBlkOWJvbh+AHJWH26ApNt5pq1UdH6wrK8fVRdAL6z1TGQ2M7TRIqqstpafv18vmqAQQHZnpg830WxGoWtFmjYTMmsbjFwAlZ2ZtTcHnryez9bMS3GPqBYASPfDwYjoaa7CcQEwq9ZDePYGxwNWT28MhEgBBuYzf5Pid2/vQPssCBdAJhyl9bK2pxi89QzS2VRxAYzszI5S9tkyk+ICsG7Y8xFi6bX69tx7+3TrALAEWn17poZEOhwAM0jBlAWOXWG2aHGN1XfkSC6A3gZIm7yMxMB7ucvs9kCMAIh2jS6Aaqixanhilq1rLPeqd3VisF5CpVwAlX091ueCpsrgmyMIhwFA2SjwCk3ldKjt3XMkBaKICgFwYY+4N1tE0MgZX9raXR5WBJsYnBUJDC4qWiOhallvo6spxXNE6gIY0Ujee9YHrepGqPfecDqALXnvWadZNrpYdr0IbZoKIDpBAoZqjEdXhiYG1YNA5GROodMA9AYllyKKm9WmZ/qQAjj7DwqjdGVnuRkAHWVmdAYArCFs1SYAmVBsngUAW2+GRjUMgPyqrPMzAWBdGEc1BCAqdjwYA9SWBxJ+py0AZe7qe2EqudeGvra+Hi8D8AbPYLzzgFYDwICk9D0xbaX099lq76kEwNuE8BCVmZgJoLn35sdTGgD55uW8zG8EKBm2eqB7AMAjENIAvKVOvwfwUkRqLwBMULUwpgBwU6tDrKl7USK1FwDMAa2iFABvVrEOf6sNltoTABNQUQpAe2DLEkAUKVJ7AsCVVSEFINrqyqWPjq02WGpvADoqI22OAJ1zDMpqJ+UBsOrH6QHoystnC4KUB4C9hD7d6SKr72t5OgBuaHXUXD2hNQAjy5bu23JlU5YCgLzlrRkI2cHIiKpch2SflndZBVBUCJvpnMH1QlCnFAceQj0DQl5nuRqNaQCEVS8KzuDqwSgNAEUbojM4+vecpxIAdFYIoy9IygAQOd77T69lHpIcpQZoM3t8b13X85ZXZEMAmsg33sBaA2oGViUvGQhRBihrP9HMBNCmmvNamwAcKQYKzNGZ9nRrAOylOwDrzwvVsvwFYeiNel18T4IAAAAASUVORK5CYII=" InformativeScreenshot="996d145c0563201feb31f4a663d8f943.png" Selector="&lt;html app='msedge.exe' title='欧元兑美元汇率_百度搜索'/&gt;" Url="https://www.baidu.com/s?ie=utf-8&amp;f=8&amp;rsv_bp=1&amp;rsv_idx=1&amp;tn=baidu&amp;wd=%E6%AC%A7%E5%85%83%E5%85%91%E7%BE%8E%E5%85%83%E6%B1%87%E7%8E%87&amp;fenlei=256&amp;rsv_pq=f0a6de0100064d71&amp;rsv_t=fc6ewXJM8lfOBkTH5uBb89bQjaHFOgW32EnEdbfXLXwWcKuOvQBuWLecATQ&amp;rqlang=cn&amp;rsv_enter=0&amp;rsv_dl=tb&amp;rsv_btype=t&amp;prefixsug=%25E6%25AC%25A7%25E5%2585%2583%25E5%2585%2591%25E7%25BE%258E%25E5%2585%2583%25E6%25B1%2587%25E7%258E%2587&amp;rsp=4" />
+      </uix:NApplicationCard.TargetApp>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+          <x:Boolean x:Key="IsPinned">False</x:Boolean>
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </uix:NApplicationCard>
+    <p:WordApplicationScope sap2010:Annotation.AnnotationText="The robot opens the Contract for Sale of Goods Word file and..." DisplayName="Use Word File" FilePath="C:\Users\UR616HD\Desktop\UIPath\Practice - Working with Word - working documents\Contract for Sale of Goods.docx" sap:VirtualizedContainerService.HintSize="719.333333333333,4280" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
+      <p:WordApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WordDocument">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="664.666666666667,4140.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <ueab:ExcelApplicationCard Password="{x:Null}" sap2010:Annotation.AnnotationText="...using data from the Excel file starts replacing the placeholder text.&#xA;" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="622.666666666667,4048.66666666667" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_1" WorkbookPath="C:\Users\UR616HD\Desktop\UIPath\Practice - Working with Word - working documents\Contract for Sale of Goods - Mook Data.xlsx">
+              <ueab:ExcelApplicationCard.Body>
+                <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
+                  <ActivityAction.Argument>
+                    <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="contractData" />
+                  </ActivityAction.Argument>
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="588.666666666667,3767.33333333333" sap2010:WorkflowViewState.IdRef="Sequence_1">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <ui:ForEachRow CurrentIndex="{x:Null}" DataTable="[contractData.Table(&quot;table2&quot;)]" DisplayName="For Each Row" sap:VirtualizedContainerService.HintSize="546.666666666667,3678.66666666667" sap2010:WorkflowViewState.IdRef="ForEachRow_1">
+                      <ui:ForEachRow.Body>
+                        <ActivityAction x:TypeArguments="sd:DataRow">
+                          <ActivityAction.Argument>
+                            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
+                          </ActivityAction.Argument>
+                          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="496,3526" sap2010:WorkflowViewState.IdRef="Sequence_5">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text: [Company Name]" sap:VirtualizedContainerService.HintSize="454,140.666666666667" sap2010:WorkflowViewState.IdRef="WordReplaceText_8" Replace="[row(&quot;Company Name&quot;).ToString]" Search="%[COMPANY NAME]" />
+                            <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text: [Company Address]" sap:VirtualizedContainerService.HintSize="454,140.666666666667" sap2010:WorkflowViewState.IdRef="WordReplaceText_9" Replace="[row(&quot;Company Name&quot;).ToString]" Search="%[COMPANY ADDRESS]" />
+                            <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text [Seller Name]" sap:VirtualizedContainerService.HintSize="454,140.666666666667" sap2010:WorkflowViewState.IdRef="WordReplaceText_10" Replace="[row(&quot;Company Name&quot;).ToString]" Search="%[SELLER NAME]" />
+                            <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text [Seller Address]" sap:VirtualizedContainerService.HintSize="454,140.666666666667" sap2010:WorkflowViewState.IdRef="WordReplaceText_11" Replace="[row(&quot;Company Name&quot;).ToString]" Search="%[SELLER ADDRESS]" />
+                            <p:WordInsertDataTable Bookmark="{x:Null}" OccurrenceIndex="{x:Null}" sap2010:Annotation.AnnotationText="This activity tells the robot to insert Table1 from the Excel file. It will replace the &quot;&lt;Insert Table here&gt;&quot; placeholder text." DataTable="[contractData.Table(&quot;Table1&quot;)]" DisplayName="Insert DataTable" sap:VirtualizedContainerService.HintSize="454,350" sap2010:WorkflowViewState.IdRef="WordInsertDataTable_2" InsertRelativeTo="Text" Position="Replace" Text="&lt;Insert Table here&gt;">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </p:WordInsertDataTable>
+                            <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text: [Total]" sap:VirtualizedContainerService.HintSize="454,140.666666666667" sap2010:WorkflowViewState.IdRef="WordReplaceText_12" Replace="[contractData.Sheet(&quot;Goods&quot;).Cell(&quot;E11&quot;)]" Search="%[TOTAL]" />
+                            <p:WordReplacePicture DisplayName="Replace Picture: Seller Logo" sap:VirtualizedContainerService.HintSize="454,140.666666666667" sap2010:WorkflowViewState.IdRef="WordReplacePicture_3" PictureAltText="Logo_Seller" PicturePath="Seller Logo.png" />
+                            <p:WordReplacePicture DisplayName="Replace Picture: Buyer Logo" sap:VirtualizedContainerService.HintSize="454,140.666666666667" sap2010:WorkflowViewState.IdRef="WordReplacePicture_4" PictureAltText="Logo_Buyer" PicturePath="Buyer Logo.png" />
+                            <p:WordReplaceText Found="{x:Null}" DisplayName="Replace Text: Date" sap:VirtualizedContainerService.HintSize="454,140.666666666667" sap2010:WorkflowViewState.IdRef="WordReplaceText_13" Replace="[contractData.Sheet(&quot;Contract Data&quot;).Cell(&quot;A1&quot;)]" Search="%[DATE]" />
+                            <p:WordReplaceText Found="{x:Null}" sap2010:Annotation.AnnotationText="Remember the value saved for later use at the begining of the project? We use it here to replace the &quot;[EUR EXCHANGE RATE]&quot; placeholder text." DisplayName="Replace Text: exchange rate" sap:VirtualizedContainerService.HintSize="454,186" sap2010:WorkflowViewState.IdRef="WordReplaceText_14" Replace="[Saved.Values(Of ExcelValue)(&quot;Exchange Rate&quot;)]" Search="%[EUR EXCHANGE RATE]">
+                              <sap:WorkflowViewStateService.ViewState>
+                                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                                </scg:Dictionary>
+                              </sap:WorkflowViewStateService.ViewState>
+                            </p:WordReplaceText>
+                            <uix:NApplicationCard CloseMode="{x:Null}" OpenMode="{x:Null}" DisplayName="Use Application: Contract for Sale of Goods.docx - Word" sap:VirtualizedContainerService.HintSize="454,1372.66666666667" sap2010:WorkflowViewState.IdRef="NApplicationCard_2">
+                              <uix:NApplicationCard.Body>
+                                <ActivityAction x:TypeArguments="x:Object">
+                                  <ActivityAction.Argument>
+                                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+                                  </ActivityAction.Argument>
+                                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="387.333333333333,1102.66666666667" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                                    <sap:WorkflowViewStateService.ViewState>
+                                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                                      </scg:Dictionary>
+                                    </sap:WorkflowViewStateService.ViewState>
+                                    <uix:NClick ClickType="Single" DisplayName="Click 'File Tab'" sap:VirtualizedContainerService.HintSize="345.333333333333,170.666666666667" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable DesignTimeRectangle="11, 62, 81, 45" ElementType="Button" FriendlyName="'File Tab'" FullSelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='Contract for Sale of Goods.docx - Word' /&gt;&lt;uia cls='MsoCommandBar' idx='1' /&gt;&lt;uia automationid='FileTabButton' cls='NetUIRibbonTab' name='File Tab' /&gt;" FuzzySelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='Contract for Sale of Goods.docx - Word' /&gt;&lt;uia cls='MsoCommandBar' /&gt;&lt;uia automationid='FileTabButton' cls='NetUIRibbonTab' name='File Tab' role='Button' check:fulltext='File Tab' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAFUAAAAxCAYAAACrkOUWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAHZSURBVHhe7da9SgNBAMRx38fXELERsQpipVgqNiJWIlailaJN0Eq0EcUyWEpaP54gPoPamOp0ztnjEjaakHGTwwn8Cbe71/y4u92J8Mu+fidXD9lkre6GjKRGVUbSb9R2+yN7f3t1Q0ZSoyojqVGVkdSoykhqVGUkNaoykhpVGUmNqoykRlVGUqMqI6lRlZHUqMpIalRlJDWqMpIaVRlJxw/18uI8m5meym5vroux46PDfOyu0ehYO26RNB0qQADTq7DOqAMUUNfXVnOk7mL3hDBv1EgB9TfAWEbtkVH/oH5RY4C9UF9arXxucaGWz8/PzWYH+3v5eHldqkhaXVTArSwvFZCYwz+u8d0O61JG0vSoscrQ/aKGsWbzvhhDsdNDqkiaHjW2+/cLWB7DK7+1uVFcl8Na3BOb+8tIWt3XH9c/ZdRSg6Du7mznY7Genx6LtakiaXVRsSH1ev1HFUmri4qnFGPdG9UoI2l1UXGkwtMajlTY7bHzYy2OWmFdykhaXVSE7yaeWMBiHuF0cXZa71iXKpKmQ/0PkdSoykhqVGUkNaoykhpVGUmNqoykRlVGUqMqI6lRlZHUqMpIalRlJDWqMpIaVRlJjaqMpEZVRlKjKiOpUXW9Zp+3y8RzKb4pQAAAAABJRU5ErkJggg==" InformativeScreenshot="26c60548eb172b3f7a3964c1f692cc69.png" SearchSteps="Selector, FuzzySelector, Image, TextFindAll" Text="File Tab" TextMethod="FullTextScrapping" TextSelector="&lt;uia role='Button' /&gt;" />
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <uix:NClick ClickType="Single" DisplayName="Click 'Save As'" sap:VirtualizedContainerService.HintSize="345.333333333333,170.666666666667" sap2010:WorkflowViewState.IdRef="NClick_2" KeyModifiers="None" MouseButton="Left">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable DesignTimeRectangle="11, 459, 210, 61" FriendlyName="'Save As'" FullSelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='Contract for Sale of Goods.docx - Word' /&gt;&lt;uia automationid='NavBarMenu' cls='NetUIKeyboardTabElement' name='File' /&gt;&lt;uia cls='NetUIRibbonTab' name='Save As' /&gt;" FuzzySelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='Contract for Sale of Goods.docx - Word' /&gt;&lt;uia automationid='NavBarMenu' cls='NetUIKeyboardTabElement' name='File' /&gt;&lt;uia cls='NetUIRibbonTab' name='Save As' role='List Item' automationid='' check:fulltext='Save As' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAANYAAABBCAYAAACtgFrVAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAN2SURBVHhe7dg/ihRBGIZx7+M5PIOZFzD0AGbGJiKYGGkiJpoYiIGBJi4ImqwmKwhqsCiOsIJB69P6QlHU9M4M87kKzwc/nP5T3bVSb1d1n0tNv+rGvYPp/MVbkna0Wq1mf2JlsKR9MFhSAYMlFTBYUgGDJRUwWFIBgyUVMFhSAYMlFTBYUgGDJRUwWFIBgyUVMFhSAYMlFTBYUgGDJRUwWFIBgyUVMFhSAYMlFTBYUgGDJRUwWFIBgyUVMFinuHb72XT47ng6+f6D/5q5Ph5/m65cfzw8/6xduvpg7uPRhy/D4/o7DNaCm/cP5kFKsO48ej2H7MmLo3mb36M2Z+35q/dz8ClCNjpH9QzWAgYoIRod+1d9/noyPwToOw+B0TmqZ7AWUP/T4MwMe+Hy3enh07dzyEbnqZ7BWpB3q9OWVAzkl28+zQOZog3b7Oc41xkN8rwPMcNkH+9unJ/i96bvc9wzM2yuPVqypr95b6RvhLI/T7szWAsYnAw6BiAzV4LSY/AyUBmc/CYoCRfHM5P0AeGanJdtjrPNhweuQzuWdPRh3b2D41QbUtqmDy32I/2lHy4b98tgnYIBywcBKgEbndejTTtL0ZZ97Tkcb/cRqLYNEhiWdu3+HoGi2gDShvv2oaQMUi2DtSFmL57+1GgWyJOfcDAbpHKcAPWzE9UuM6lRgLjm6J4tzskyMEZLTdA/+tLv1/4YrC1lZmgHZWY0Bj/hytKQyjkZ5HmX4ThhyHEsVX9uK9deV31bZrD0b5tZWJszWDvgiZ/BmKVa//TnONXuo11mntGMQSWYvaUPGLTheqN2CX07MwZ9z3Ix/dJ+GKwtMRjbpzyDl8pMFLwrUe0+gpRA8W97DASvX85tgnutC0aCn/6OEL6lGVHbM1gLMjMRBALE0z3vJ+0MwDb785WNcLBNtdfLIOdY+9EiaE/RPjMO914a9OuC3eJ67UcR7p+/iXb03xlrvwzWAgZ0W5kZ+mUVy7QEiUFKAAkk1Z4H2lOjpRkY6LkWxe+l2YbrjWa/FiGiCBLbBI02FH8T1yf0fTvtzmBJBQyWVMBgSQUMllTAYEkFDJZUwGBJBQyWVMBgSQUMllTAYEkFDJZUwGBJBQyWVMBgSQUMllTAYEkFDJZUwGBJBQyWVMBgSQUMllTAYEkFDJZUwGBJBQyWVOB3sFbTT+iOoPGPL++dAAAAAElFTkSuQmCC" InformativeScreenshot="3a46c2d6f0a7e88391076c164b1f8c96.png" SearchSteps="Selector, FuzzySelector, Image, TextFindAll" Text="Save As" TextMethod="FullTextScrapping" TextSelector="&lt;uia role='List Item' /&gt;" />
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <uix:NClick ClickType="Single" DisplayName="Click 'Desktop ‎&gt;'" sap:VirtualizedContainerService.HintSize="345.333333333333,170.666666666667" sap2010:WorkflowViewState.IdRef="NClick_3" KeyModifiers="None" MouseButton="Left">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable DesignTimeRectangle="807, 171, 1042, 42" ElementType="Button" FriendlyName="'Desktop ‎&gt;'" FullSelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='Contract for Sale of Goods.docx - Word' /&gt;&lt;uia cls='NetUIElement' name='Save As' /&gt;&lt;uia cls='NetUISlabContainer' name='Pick a Folder' /&gt;&lt;uia cls='NetUISimpleButton' name='Desktop ‎&amp;gt; UIPath ‎&amp;gt; Practice - Working with Word - working documents' /&gt;" FuzzySelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='Contract for Sale of Goods.docx - Word' /&gt;&lt;uia cls='NetUIElement' name='Save As' /&gt;&lt;uia cls='NetUISlabContainer' name='Pick a Folder' /&gt;&lt;uia cls='NetUISimpleButton' name='Desktop ‎&amp;gt; UIPath ‎&amp;gt; Practice - Working with Word - working documents' role='Button' automationid='' check:fulltext='Desktop ‎&amp;gt; UIPath ‎&amp;gt; Practice - Working with Word - working documents' /&gt;" ImageBase64="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ypKkukRUE+aYuJLoSLLU4bAUGc/I6Att8UwfMy7qVltpGxvo8LlWZw18MPPdUeI36OKFvKsX/a3lI/l2IL4G/k75aGMWmy7GFewg72Qd6J/p424sM9bGstdnyCmvcxbGMe717Va7mVvo0Ud0KON5q0/OIn2B2cExfoTZ2uzGTj2eu3prMe3ksz2q012zj5+R17LYrvOIMogPahzXwA7jp34nw14nm/X9fa11uOq8gIynxomyo3G6haMxhrN908kfac0ciSs6lG/14axO2qr2u/7wd/qCPLpLvjsiy/qjj7SHnDKea7uwZB8yjlo220sow9+Upc2U5fwoIvII3OVi4Uxu+bUCsDmPJEmwya9t2uiwuacuCYFNf/wmhGQw6lFW7c8SETqzhFyTNfarDHskprSJHn3j1r/qRTdtI0/Si90r3Yrjg9o/YJyjbyrojIl/qbwD38TXiR/lMxtdbI4cNt4ns7F0rI0F9vqMeTbOWZ7H9bTXt1vtbl3P94b+pg+zPajqLPXv6D4wypbk3R7V6a7Z7+Y/ttEnFsjS/5RTht1aZ4m8gPA5yrA7ky31/X2t9avOCzg7TrdwNMbhTN/M5Pglc+bKa+aoLcq2+jBs2adpt643+hXf8FzzypLvjsq25oglGzBb/91ego2xTcrwxVhfROTKnHaxINdmLQmKiFyNvIR4wBbZhmtGREReCi8WngQvFkTkkeDFiG/2+Pauk4vIu7hmRETkJfFi4UnwYkFErgb7UveTX575+bF7lsi7uGZEROSqeLHwJHixICJXI/sS37LyUsT+xL9B5htXyuu/pxYR14yIiFwXLxaeBC8WROSK8J+l5T86CzznP7wTkXdxzYiIyBXxYkFEREREREREDuPFgoiIiIiIiIgcxosFERERERERETmMFwsiIiIiIiIichgvFkRERERERETkMF4siIiIiIiIiMhhvFgQERERERERkcN4sSAiIiIiIiIih/FiQUREREREREQO8uubfwEPOFKcVraL3wAAAABJRU5ErkJggg==" InformativeScreenshot="0d62a38b9e75befbfe1ad17ebb1c0e9a.png" SearchSteps="Selector, FuzzySelector, Image, TextFindAll" Text="Desktop ‎&gt; UIPath ‎&gt; Practice - Working with Word - working documents" TextMethod="FullTextScrapping" TextSelector="&lt;uia role='Button' /&gt;" />
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                    <uix:NTypeInto ClickBeforeMode="{x:Null}" DelayBetweenKeys="{x:Null}" EmptyFieldMode="{x:Null}" ActivateBefore="True" DisplayName="Type Into 'File name:'" sap:VirtualizedContainerService.HintSize="345.333333333333,168" sap2010:WorkflowViewState.IdRef="NTypeInto_1" Text="[&quot;Contract for Sale of Goods&quot;+row.ToString]">
+                                      <uix:NTypeInto.Target>
+                                        <uix:TargetAnchorable DesignTimeRectangle="202, 489, 710, 27" ElementType="InputBox" FriendlyName="'Edit'" FullSelectorArgument="&lt;wnd app='winword.exe' cls='#32770' title='Save As' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" FuzzySelectorArgument="&lt;wnd app='winword.exe' cls='#32770' title='Save As' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;wnd aaname='File name:' cls='ComboBox' /&gt;&lt;wnd ctrlid='1001' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAsoAAAAfCAYAAAD++uv1AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAUhSURBVHhe7d1pktowEIZhzuUDcR5Ow2U4jCNrMVpaUjcYmJTfp8o/8Mha2q7SNw5JLisAAACABkEZAAAAEBCUAQAAAAFBGQAAABAQlAEAAAABQRkAAAAQEJQBAAAAAUEZAAAAEBCU33C/XtbLZTuu6z2e++v8nJfb+oifv+l/rFfrvl7dGpbbJyr4yb4BAIDVNCg/bksMN/mxrGffy0Ndvhn4Huttqe+DPVT9Kii/Ui/52bus15+mbIIyAABnMQjKYdOWws39+umgHMb+biCyjBlD67cmeL/6gNgEKHf+/wjK1nr1nz1fi58m5U+G2U/2DQAArDpBOQaVXwWSx21d3PhfHd40Zgh+3wk0x4byXwZlXb1+/OxNEZQBADgLMSh//2sFFYJy5tjg+NeD8s+fvSmCMgAAZyEE5dfeYD7/olY6pK9suPNbSIuhNLXNg0HbjzviXPbr41cRnoEvzlm4piS3G43ZSGMP2ppq0aylFfrTfN1lXod93PjZq+7HaC616VoV9Xp6/ZcCTc0Tfdu6nts9kMNs0+d0Dfq+N6/P2R1uLun73uW0Xq83AABn0AblGJr0b7XiZluFq7Cxl+Fu3+zztjFIFXt15+3ufn37g2q+QuBIYbC41rVLnztjykIYaWv0Qi1UA8Z+hb4Lijr4cfM+mvsdg9Z0Xvq19utVMd2DxDIPQ9ve87Kdc0dTr6JP1260CHXfmwPmHD/X977+DAAASt2gPNrnc/3Ntg1c4uYutOvNIVzff1OYM4cC07rl4GevhW4tSfGvQCgDzrgOQu03/peX+j6VLGvt1avRuwf1W+nuenKdmr/bNs7xuZYQZJs5D+j7Pmp9STZXP9b4HgMAcHZvBuWw8fYCUP19095G3pzvzGEcBGJwcNe1gUoRZkzrloLfMbXQeAZmKeiM6lCN21vztBa2taY59drvFPegrJtlHke1rX+W6q0NnZa+7XOePr/bLx3Ldb1q7gcAACcnfEd5vDmXJm39m8B5OGzOG4OyP1/No2irCcGaNjt7UHYTUtVCL4yX9zGtQ/05rrkI1dnRr4VtrXK9JPNnr1yPZR5HtZV/lmrvj+FDZOnbMGfD81s/EwAAQCYEZctGOt7I6zeLvX6b85agrGmrCRGGoOEam4OythYWRZ/KmpnrIrKt1Z1RBuV5XcqfW+ZxVNtxP6mm/TVY+jbMWXsvfbhe1sXdD/t9BwDgXMSgnDbdbhjI9INN/CPpbDfutW3OK0OfJ7aNY+9t27k0tEHDk4PfEbWw8H0Mg1Jdh3pcRV06LGtN5zTP0+zZq8e1zEPfNn6W2vqgOVlLDKNyE1vf5jkP72UI3r5J/jYaAACI5KC8iZu2tEkX/zNfDDZ1O7/BVxtxb9Nvz8tv0uTrQ9smENVzSuspgoS7dv88fntXCqGkaXtALVrbvIRA04QqXR2acWM/RVm2vmZzM6y1W68e8V5thJBpmYelrTSHdL07irpX8yxrLMxZ3bfz7pyz+flr9p9pgjUAAOfWD8pe3EzjBv485CBUtKk29k0ZIJ7E82nT3458oxeuz0PGdmxBQ24bw2R2lJmiHVMW1isHv/dq0WrnHA7hjaWiDtNax0OXn3RrHderR+jbH/a/wFgytK3qGdqF+/Fci3B/iv7iePUYqr4Ty/rkZ9zf97p2cQ62+wIAwHlMgjIAAABwTgRlAAAAQEBQBgAAAAQEZQAAAEBAUAYAAAAEBGUAAABAQFAGAAAABARlAAAAQEBQBgAAABrr+g8dmysUfGXn1AAAAABJRU5ErkJggg==" InformativeScreenshot="afdd84bb394071e706d7ecfd77af35ce.png" SearchSteps="Selector, FuzzySelector, Image">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                              <uix:Target DesignTimeRectangle="26, 486, 173, 33" ElementType="Text" FriendlyName="'File name:'" FullSelectorArgument="&lt;wnd app='winword.exe' cls='#32770' title='Save As' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;ctrl name='Explorer Pane' role='pane' /&gt;&lt;ctrl name='Folder Layout Pane' role='pane' /&gt;&lt;ctrl name='Details Pane' role='pane' /&gt;&lt;ctrl name='File name:' role='text' /&gt;" FuzzySelectorArgument="&lt;wnd app='winword.exe' cls='#32770' title='Save As' /&gt;&lt;wnd aaname='Explorer Pane' cls='DirectUIHWND' /&gt;&lt;ctrl name='Explorer Pane' role='pane' /&gt;&lt;ctrl name='Folder Layout Pane' role='pane' /&gt;&lt;ctrl name='Details Pane' role='pane' /&gt;&lt;ctrl name='File name:' role='text' automationid='' check:text='File name:' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAALEAAAAlCAYAAAAN3giQAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAHxSURBVHhe7djRkYMgFEBRq7Ie6kgDFkMv1mIHrCBungjKRmXyZu/OnI8QJDK5Jma7aZocoBkRQz0ihlqv1ysgYqjlA/Z/RAy1iBjqETHUI2KoR8RQj4ihHhFDPSKGekT85azpXNcPbsw8hwURt2SN67o5ygxj/ZzRDf38WERLxOeIuKUQce+GMfNcQMSfIOKWTiPeI+JzRNwSET+CiFuqiDiNNhvxOLhe3lNXRP67TnJsP4zJ3HhLI+Z0xm7mjEM/jxtnJ+tMbl56fsnx2TmbPexvq44QcUt3RBzf/Hd88Q3PhSKEddJYwvmsPyrfY9uwl1Dl2BKxX8+HHOet59WvgSfjcs3TPRDx94rR7BxEu31cCLb24tjN+cMFIM5piXj/evnXuG8PJUTcUm1spYjjJ9jmk/NoXEjXPR6PoRUutPfthDymcvzCHkqIuKWbIt7EJdwRcXg8ryW//tM5d0ScnvuKiL/dU5/EFdJ1s+OF9Z+I+JM9lBBxS1cjrryHzfk84viad0V8YQ8lRNzS5YhnYY00NOtMJlCpKuL1X2YisPC8HxPHXot4drqH/YVzhIhbuiNiL0YgnX0910U8S+5Z/b1xOudyxN7hHogY/wwRQz0ihnpEDPWIGOoRMdQjYqhHxFCPiKGej9gjYqhHxFBucj+iMLMta2J7KgAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector, Image, TextFindAll" Text="File name:" TextMethod="AttributeText" TextSelector="&lt;ctrl role='text' /&gt;" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NTypeInto.Target>
+                                    </uix:NTypeInto>
+                                    <uix:NClick ClickType="Single" DisplayName="Click 'Save'" sap:VirtualizedContainerService.HintSize="345.333333333333,170.666666666667" sap2010:WorkflowViewState.IdRef="NClick_4" KeyModifiers="None" MouseButton="Left">
+                                      <uix:NClick.Target>
+                                        <uix:TargetAnchorable DesignTimeRectangle="1726, 254, 123, 36" ElementType="Button" FriendlyName="'Save'" FullSelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='Contract for Sale of Goods.docx - Word' /&gt;&lt;uia cls='NetUIElement' name='Save As' /&gt;&lt;uia cls='NetUISlabContainer' name='Pick a Folder' /&gt;&lt;uia cls='NetUIButton' name='Save' /&gt;" FuzzySelectorArgument="&lt;wnd app='winword.exe' cls='OpusApp' title='Contract for Sale of Goods.docx - Word' /&gt;&lt;uia cls='NetUIElement' name='Save As' /&gt;&lt;uia cls='NetUISlabContainer' name='Pick a Folder' /&gt;&lt;uia cls='NetUIButton' name='Save' role='Button' automationid='' check:fulltext='Save' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAH8AAAAoCAYAAADXNiVcAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAPLSURBVHhe7Zq/a5NBGID7B+joIE5Obm6CdHII3czeH1vAgg6lhVLQqXWwCB3apSgW6mJtOqUYECEQqWBLhC5iQnFOKk6SrU05ea688XK5r/ksJN/X3A0P+e7e+1H63L13X9ORZrOpAn4S5HtMW/7Ozk7AE5zyz87OAkNOkO8xQb7HBPkeE+R7TOLyR0fv9xXXnIFzUiF/evqRWltb1fBMnZTjEjWOa87AOamQj6yTkxONiJRyXKLGcc0ZOCfI95gg32OCfI8ZGvljYxm1u1tQrVZLj1utVtXGxpuu+WzK5bJaWFhQ2WxWZTIZTS6XU5VKxdl+mBga+QcH+87xL6JYLGrZyM/n83ohrK+v6zLPrj7DxFDIl93+v7DDEe2K+UBq5ceBVG/v+MnX39T1J0X14OUXVTisd8Rs2PXsdFfMB1Inv1Qq6XIcbPHZtX01kiuoiVcVde3xB3Xv+eeOuI2c9bVazRkXjo+P1dLSkhofH9cLhj6UqSfOOMTsfoxLe44UqeMuQXvq5chJ6n6ROvlxsVP9w9WvWvzNuY/qqPFHLwDKZhsb5CANmWQAkWnD+Y9s7gg8I1MWAHG5O9gSGZN2UiZOeWZmRo9DP44efoaoufvJlZQfJX767aFO+SwAytSb7VzwS19ZWWnv6LjHAH3M3U5f6sw2xM06pNsZgvmZe3Nzs6N+EFw5+VHiFws/dJwFQPnOs5L6+avZ0fYiyALsZETIjjaRNwEEsltpBxJHsr3LiZtHSpRkxnTN2W+ulPxe4vm8jHgTUjqSzHNaMgOCWAByDJjy5XwnlVMmjlSJA/Eo7LaDILXyqRdct/p+iBfY2ZL+JS2biwGIU2/W0U92MFnA7kN7WTw2SVz6Ui1fvqK9rPhGo9HRLw7INs9+xCBNdrTA2W3Ll4ugfJoxSNvfFVItn/rLpvp6va4mJ7tfv0xkhyMLyZzH1CHOPKspUy+3fQRStuVLliBmX/5A3groLzueuZNI+ZB6+WZbeY/vJZ4FQ1/GMPvb8EtHhsBuJm2b4oGULLJZCCwSV9oHuQvYYwjyeidz8ixZZtCkQv7y8gun/O3t9+128/nvWjTwDn+R+NPT01jyfSdx+VNTE1rS1ta7LvmkbmmH5Buzn9Tdxb32IogST/8gvzeJy+dS5loAc3Oz7TZ7R7+17FvzJXX7abmn+CA/HonLB3MBcAQgLirlI50vb+zLHX1Mwj9w9iYV8sFcAGCmfC56LAAygNkH6MetXvrZ2O0D/0iN/MDgCfI9Jsj3mCDfY4J8j4mUH/CDLvkB/wjyvaWp/gJj2Bhv2bdO5wAAAABJRU5ErkJggg==" InformativeScreenshot="780130665e317f1bd16f773e22ccf72a.png" SearchSteps="Selector, FuzzySelector, Image, TextFindAll" Text="Save" TextMethod="FullTextScrapping" TextSelector="&lt;uia role='Button' /&gt;">
+                                          <uix:TargetAnchorable.Anchors>
+                                            <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                                              <uix:Target DesignTimeRectangle="641, 692, 132, 39" ElementType="Button" FriendlyName="'&amp;Save'" FullSelectorArgument="&lt;wnd app='winword.exe' cls='#32770' title='Save As' /&gt;&lt;wnd ctrlid='1' title='&amp;amp;Save' /&gt;" FuzzySelectorArgument="&lt;wnd app='winword.exe' cls='#32770' title='Save As' /&gt;&lt;wnd ctrlid='1' title='&amp;amp;Save' check:text='&amp;amp;Save' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAIgAAAArCAYAAACjMsASAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAAAG8SURBVHhe7dfNcYMwEEBhelI3NEMrasBFUAod0IFiIQErvKztSQ5heYdvJuHvwrO0dPM8J+AMgcBEIDA1gTweD8AOZJom3BiBwEQgMBEITAQCE4HARCAwEQhMBAITgcBEIDARCEzOAxnTELrUda0wjMq10PgNJPZ6DM/jBPI5p4HUlaOPyjl8w2kgMfV5OyGQX3MayJRin+eNkIZRP79T5hQR1vKcMKSxuUfcJ8+NQwryOep91+I2kG0VefeiXmaSct92rM4yfVzPVzWG7Xj9f3+Wj23OcSDFOISvf9HtqqG/6OW5b64pcX2yiv1f7gNZ7aFoL0zZZkRM5d4+xe36wypzXE1WZ8cv5DaBFHXbES+/zCrt5/DL3HF80cvKIIKp55vABAK5kGY1OPmFa4OpPLb8LbcTByvFmdsFUlYMKxDl6yRb54mY7zluUz4GUo3TQPJWImeGqn6R7NtJ3XLEiy0BKYHUCEKQw6mgfu08n69deyGOA6kvuqEMqIf5IcejbTHZOuiebiU1Eunq247TQPBXCAQmAoGJQGAiEJgIBCYCgYlAYCIQmAgEpreBALKJJhDgiEBgIhAY5vQDquS2Bw+Jeq4AAAAASUVORK5CYII=" SearchSteps="Selector, FuzzySelector, Image, TextFindAll" Text="&amp;Save" TextMethod="AttributeText" TextSelector="&lt;wnd /&gt;" />
+                                            </scg:List>
+                                          </uix:TargetAnchorable.Anchors>
+                                        </uix:TargetAnchorable>
+                                      </uix:NClick.Target>
+                                    </uix:NClick>
+                                  </Sequence>
+                                </ActivityAction>
+                              </uix:NApplicationCard.Body>
+                              <uix:NApplicationCard.TargetApp>
+                                <uix:TargetApp FilePath="C:\Program Files (x86)\Microsoft Office\root\Office16\WINWORD.EXE" IconBase64="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" InformativeScreenshot="ea87f5694e93645364b76278a76ba780.png" Selector="&lt;wnd app='winword.exe' cls='OpusApp' title='Contract for Sale of Goods.docx - Word'/&gt;" />
+                              </uix:NApplicationCard.TargetApp>
+                            </uix:NApplicationCard>
+                          </Sequence>
+                        </ActivityAction>
+                      </ui:ForEachRow.Body>
+                    </ui:ForEachRow>
+                  </Sequence>
+                </ActivityAction>
+              </ueab:ExcelApplicationCard.Body>
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </ueab:ExcelApplicationCard>
+          </Sequence>
+        </ActivityAction>
+      </p:WordApplicationScope.Body>
+      <sap:WorkflowViewStateService.ViewState>
+        <scg:Dictionary x:TypeArguments="x:String, x:Object">
+          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
+        </scg:Dictionary>
+      </sap:WorkflowViewStateService.ViewState>
+    </p:WordApplicationScope>
+  </ueab:SequenceX>
+</Activity>
